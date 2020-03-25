@@ -29,15 +29,15 @@ public class Account {
 
     public void debit(int amount) {
         if (amount > balance) {
-            System.out.println("Insufficient balance! Please add more money.");
+            System.out.println("Số dư tài khoản không đủ! Không thanh toán được!.");
         } else {
             balance -= amount;
         }
     }
 
     public void transferTo(Account account, int amount) {
-        if (amount < this.balance) {
-            System.out.println("Insufficient balance! Can't transfer!");
+        if (amount > this.balance) {
+            System.out.println("Số dư tài khoản không đủ! Không thể chuyển tiền");
         } else {
             account.credit(amount);
             this.balance -= amount;

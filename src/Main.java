@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Account nam = new Account(1, "Nam", 1000);
-        Account duc = new Account(2, "Duc", 500);
+        Account duc = new Account(2, "Đức", 500);
         displayBalance(nam);
         displayBalance(duc);
         System.out.println();
@@ -21,8 +21,8 @@ public class Main {
         System.out.println();
 
         //Trừ quá số tiền trong tài khoản
-        System.out.println("Trừ 500 vào tài khoản Nam");
-        nam.debit(500);
+        System.out.println("Trừ 1000 vào tài khoản Nam");
+        nam.debit(1000);
         displayBalance(nam);
         System.out.println();
 
